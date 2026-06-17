@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Onboarding Portal — Thobeka Zwane</title>
+  <meta name="description" content="Welcome to your learning cohort. Complete your onboarding steps, view cohort calendar schedules, and access live classroom resources.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" id="brand-logo">Thobeka Zwane</a>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" id="nav-link-home">Home</a></li>
+        <li><a href="curriculum.html" id="nav-link-curriculum">Curriculum</a></li>
+        <li><a href="onboarding.html" class="active" id="nav-link-onboarding">Student Portal</a></li>
+        <li><a href="index.html#pricing" class="btn btn-outline" id="nav-link-cta" style="padding: 0.5rem 1.25rem;">Enroll</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Welcoming Section -->
+  <section class="onboarding-welcome" id="welcome-section" style="background-color: var(--bg-secondary); padding: var(--space-xl) 0;">
+    <div class="container" style="max-width: 800px; text-align: center;">
+      <span class="section-tag" id="onboarding-tag">welcome student</span>
+      <h1 class="hero-title" id="welcome-title" style="margin-bottom: var(--space-md);">Welcome to the Cohort!</h1>
+      <p class="hero-description" id="welcome-message" style="margin-bottom: var(--space-lg);">
+        I'm thrilled to have you here. We're going to simplify your curriculum modules and build high-performance study workflows together. Below you'll find the next steps, FAQ, and your live schedule calendar.
+      </p>
+      <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: var(--space-md); border-radius: var(--border-radius-md); text-align: left; box-shadow: var(--shadow-sm);" id="next-steps-card">
+        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: var(--space-sm); display: flex; align-items: center; gap: 0.5rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"></polyline></svg>
+          Kickoff Checklist
+        </h4>
+        <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: var(--space-xs);">
+          <li style="display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.95rem; color: var(--text-secondary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>Check your inbox:</strong> A Zoom/Teams link and student credentials will arrive shortly.</span>
+          </li>
+          <li style="display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.95rem; color: var(--text-secondary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>Install AI tools:</strong> See the tools guide in the FAQs below to download requirements.</span>
+          </li>
+          <li style="display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.95rem; color: var(--text-secondary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px; flex-shrink: 0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span><strong>Review your Schedule:</strong> Select dates on the active live calendar below to view agenda items.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Calendar Section -->
+  <section class="onboarding-calendar" id="schedule">
+    <div class="container" style="max-width: 800px;">
+      <div class="text-center" style="margin-bottom: var(--space-lg);">
+        <span class="section-tag" id="calendar-tagline">live schedules</span>
+        <h2>Your Live Cohort Calendar</h2>
+        <p>Click on highlighted days with dots to view live class times, topics, Zoom meeting details, and prepare materials.</p>
+      </div>
+
+      <!-- Calendar Placement -->
+      <div class="calendar-panel" id="calendar-panel">
+        <div class="calendar-header">
+          <button id="calendar-prev-month" aria-label="Previous Month" style="padding: 5px 10px;">&larr;</button>
+          <span id="calendar-month-year" class="calendar-title">June 2026</span>
+          <button id="calendar-next-month" aria-label="Next Month" style="padding: 5px 10px;">&rarr;</button>
+        </div>
+        <div class="calendar-grid">
+          <div class="calendar-day-label">Sun</div>
+          <div class="calendar-day-label">Mon</div>
+          <div class="calendar-day-label">Tue</div>
+          <div class="calendar-day-label">Wed</div>
+          <div class="calendar-day-label">Thu</div>
+          <div class="calendar-day-label">Fri</div>
+          <div class="calendar-day-label">Sat</div>
+        </div>
+        <div class="calendar-days" id="calendar-days-container">
+          <!-- Populated dynamically by app.js -->
+        </div>
+        <div class="calendar-session-details" id="session-details-box">
+          <div class="session-tag-live" id="session-status-badge">Live Class</div>
+          <h4 id="session-title-display" style="font-family: var(--font-body); font-weight: 700; margin-bottom: 4px;">Syllabus Deep-Dive & AI Introduction</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 8px;"><strong id="session-time-display">Time: Tuesday, June 9 at 6:00 PM (GMT+2)</strong></p>
+          <p id="session-description-display" style="font-size: 0.95rem;">
+            An overview of the semester curriculum modules and setting up custom-instructed AI agents for course outlines.
+          </p>
+          <a href="#" class="session-zoom-link" id="session-zoom-button" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            Join Live Class Room
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQ Section -->
+  <section class="faq" id="faq" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-lg);">
+        <span class="section-tag">frequently asked questions</span>
+        <h2>Cohort Portal Support</h2>
+        <p>Everything you need to know about class operations, assignments, and curriculum tools.</p>
+      </div>
+
+      <div class="faq-section">
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item" id="faq-item-1">
+          <button class="accordion-header" id="faq-header-1">
+            <span>How are the weekly live group classes delivered?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content" id="faq-content-1">
+            <p style="padding-top: var(--space-xs);">
+              All live group cohorts are delivered via Zoom and Microsoft Teams. You will receive calendar invite links automatically upon cohort confirmation. In addition, classroom joining links are updated dynamically directly inside your Student Portal dashboard above.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item" id="faq-item-2">
+          <button class="accordion-header" id="faq-header-2">
+            <span>What happens if I miss a live session?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content" id="faq-content-2">
+            <p style="padding-top: var(--space-xs);">
+              No stress. Every live session is recorded automatically. Video replays, clean transcripts, code repositories, and AI summary notes are uploaded to the student portal within 2 hours of class completion, giving you unlimited access to review material at your own pace.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item" id="faq-item-3">
+          <button class="accordion-header" id="faq-header-3">
+            <span>What tools do I need to prepare for the AI Web Design modules?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content" id="faq-content-3">
+            <p style="padding-top: var(--space-xs);">
+              To prepare for AI design, please install the following free/trial tools before our kickoff date:
+            </p>
+            <ul style="padding-left: var(--space-md); margin-top: var(--space-xs); font-size: 0.95rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 4px;">
+              <li><strong>Cursor Code Editor:</strong> The leading AI-powered code editor (fork of VS Code).</li>
+              <li><strong>v0 by Vercel:</strong> For generating layouts, forms, and component designs with prompts.</li>
+              <li><strong>ChatGPT / Claude:</strong> Used for curriculum concept breakdowns and prompt engineering.</li>
+              <li><strong>GitHub Account:</strong> To store, track, and share your practical portfolio projects.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item" id="faq-item-4">
+          <button class="accordion-header" id="faq-header-4">
+            <span>Can I switch cohorts or request 1-on-1 support?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content" id="faq-content-4">
+            <p style="padding-top: var(--space-xs);">
+              Yes. You can upgrade or switch your cohort path during the first 7 days of the billing cycle. If you require targeted help, the University Elite and Career Switcher tiers include direct email support and dedicated mentorship reviews.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 id="footer-logo">Thobeka Zwane</h4>
+          <p id="footer-brand-desc">Master the syllabus. Accelerate your career. Harness AI for design and learning.</p>
+        </div>
+        <div class="footer-links-col">
+          <h5>Storefront</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="index.html#pricing">Cohorts Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="onboarding.html">Student Portal</a></li>
+            <li><a href="onboarding.html#faq">FAQs</a></li>
+            <li><a href="mailto:hello@thobekazwane.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p id="copyright">&copy; 2026 Thobeka Zwane. All rights reserved.</p>
+        <p id="footer-terms">Minimalist Design by Antigravity</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

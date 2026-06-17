@@ -3,513 +3,269 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UniSphere - Varsity Learning Dashboard</title>
-  <meta name="description" content="A premium interactive learning dashboard for university and varsity students to manage courses, study with flashcards, focus with a Pomodoro timer, and track their GPA.">
-  
-  <!-- FontAwesome for Premium Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+  <title>Thobeka Zwane — Academic Consulting & AI Web Design Cohorts</title>
+  <meta name="description" content="Master your curriculum modules and accelerate your learning using modern AI tools. Premium cohort classes and academic consulting by Thobeka Zwane.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="app-container">
-    
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <div class="logo-area">
-        <div class="logo-icon">
-          <i class="fa-solid fa-graduation-cap"></i>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" id="brand-logo">Thobeka Zwane</a>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active" id="nav-link-home">Home</a></li>
+        <li><a href="curriculum.html" id="nav-link-curriculum">Curriculum</a></li>
+        <li><a href="onboarding.html" id="nav-link-onboarding">Student Portal</a></li>
+        <li><a href="#pricing" class="btn btn-outline" id="nav-link-cta" style="padding: 0.5rem 1.25rem;">Enroll</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag" id="hero-tagline">cohorts & consulting</span>
+        <h1 class="hero-title" id="hero-headline">Master your curriculum. <br><span class="serif-italic text-accent">Build with AI.</span> Learn 10x faster.</h1>
+        <p class="hero-description" id="hero-copy">
+          We bridge the gap between heavy academic curriculums and modern development. Learn core textbook subjects alongside the cutting-edge AI design workflows that top professionals use.
+        </p>
+        <div class="hero-buttons">
+          <a href="#pricing" class="btn btn-primary" id="hero-cta-primary">Secure Your Cohort Seat</a>
+          <a href="curriculum.html" class="btn btn-outline" id="hero-cta-secondary">Explore Curriculum</a>
         </div>
-        <span class="logo-text">UniSphere</span>
       </div>
+    </div>
+  </header>
+
+  <!-- Problem / Solution Section -->
+  <section class="problem-solution" id="about">
+    <div class="container">
+      <span class="section-tag" id="about-tagline">why we do this</span>
+      <h2 class="section-title" id="about-headline">The Academic System is Moving Too Fast</h2>
       
-      <nav class="nav-menu">
-        <a href="#dashboard" class="nav-item active" id="nav-dashboard">
-          <i class="fa-solid fa-chart-simple"></i>
-          <span>Dashboard</span>
-        </a>
-        <a href="#flashcards" class="nav-item" id="nav-flashcards">
-          <i class="fa-solid fa-clone"></i>
-          <span>Flashcards</span>
-        </a>
-        <a href="#focus" class="nav-item" id="nav-focus">
-          <i class="fa-solid fa-circle-play"></i>
-          <span>Focus Timer</span>
-        </a>
-        <a href="#gpa" class="nav-item" id="nav-gpa">
-          <i class="fa-solid fa-calculator"></i>
-          <span>GPA Calculator</span>
-        </a>
-        <a href="#planner" class="nav-item" id="nav-planner">
-          <i class="fa-solid fa-calendar-check"></i>
-          <span>Study Planner</span>
-        </a>
-      </nav>
-      
-      <div class="user-profile">
-        <div class="avatar">
-          <i class="fa-solid fa-user"></i>
+      <div class="grid-2">
+        <div class="problem-card" id="problem-card">
+          <div class="card-icon" id="problem-icon">
+            <!-- Warning/Alert SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3 class="card-title" id="problem-title">The Academic Struggle</h3>
+          <p id="problem-text">
+            Professors move through complex syllabus topics at breakneck speeds, and textbook definitions are often buried in dense jargon. You are expected to absorb massive modules, write clean papers, and study for exams all on your own, leaving little room to acquire actual job-ready skills.
+          </p>
         </div>
-        <div class="user-info">
-          <span class="username" id="display-username">Thobeka Zwane</span>
-          <span class="user-role">Varsity Student</span>
+
+        <div class="solution-card" id="solution-card">
+          <div class="card-icon" id="solution-icon">
+            <!-- Lightbulb/Solution SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/></svg>
+          </div>
+          <h3 class="card-title" id="solution-title">The AI-Assisted Solution</h3>
+          <p id="solution-text">
+            Our group cohorts simplify academic modules. We break down the exact same curriculum syllabus into easy-to-understand frameworks, while concurrently teaching you how to use state-of-the-art AI tools (like Claude, ChatGPT, Cursor, and v0) to accelerate your research, study, and web development workflows.
+          </p>
         </div>
       </div>
-    </aside>
+    </div>
+  </section>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-      
-      <!-- Top Bar -->
-      <header class="top-bar">
-        <div class="search-box">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Search resources or notes..." id="global-search">
-        </div>
-        <div class="header-actions">
-          <button class="action-btn" id="theme-toggle" title="Toggle Light/Dark Theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <div class="notification-badge" title="Notifications">
-            <i class="fa-solid fa-bell"></i>
-            <span class="badge">3</span>
-          </div>
-          <div class="date-display" id="current-date">June 9, 2026</div>
-        </div>
-      </header>
-
-      <!-- Content Views (Single Page Application Containers) -->
-      <div class="content-body">
-        
-        <!-- SECTION: DASHBOARD -->
-        <section id="dashboard" class="content-section active">
-          <div class="section-header">
-            <h1>Welcome back, Thobeka!</h1>
-            <p>Here's your study progress and goals for today.</p>
-          </div>
-          
-          <!-- Stat Cards Row -->
-          <div class="stats-grid">
-            <div class="stat-card violet-glow">
-              <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
-              <div class="stat-info">
-                <h3>Study Hours</h3>
-                <p class="stat-value" id="stat-hours">12.5 <span class="unit">hrs</span></p>
-                <span class="stat-trend positive"><i class="fa-solid fa-arrow-up"></i> +1.5h this week</span>
-              </div>
-            </div>
-            
-            <div class="stat-card cyan-glow">
-              <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
-              <div class="stat-info">
-                <h3>Current GPA</h3>
-                <p class="stat-value" id="stat-gpa">3.85</p>
-                <span class="stat-trend positive"><i class="fa-solid fa-arrow-up"></i> Top 10% of class</span>
-              </div>
-            </div>
-
-            <div class="stat-card emerald-glow">
-              <div class="stat-icon"><i class="fa-solid fa-square-check"></i></div>
-              <div class="stat-info">
-                <h3>Tasks Completed</h3>
-                <p class="stat-value" id="stat-tasks">8 <span class="unit">/ 12</span></p>
-                <span class="stat-trend positive"><i class="fa-solid fa-check"></i> 66% completed</span>
-              </div>
-            </div>
-
-            <div class="stat-card amber-glow">
-              <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
-              <div class="stat-info">
-                <h3>Deck Mastery</h3>
-                <p class="stat-value" id="stat-mastery">74 <span class="unit">%</span></p>
-                <span class="stat-trend neutral">3 active decks</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mid Section Grid -->
-          <div class="dashboard-grid">
-            
-            <!-- Courses Tracker -->
-            <div class="glass-panel courses-panel">
-              <div class="panel-header">
-                <h2>Active Courses</h2>
-                <button class="panel-action-btn" id="add-course-btn"><i class="fa-solid fa-plus"></i> Add Course</button>
-              </div>
-              <div class="courses-list" id="courses-container">
-                <!-- Dynamic courses injected here -->
-              </div>
-            </div>
-
-            <!-- Daily Target Focus -->
-            <div class="glass-panel target-panel">
-              <div class="panel-header">
-                <h2>Today's Focus</h2>
-              </div>
-              <div class="daily-target-box">
-                <div class="progress-ring-container">
-                  <svg class="progress-ring-svg" width="160" height="160">
-                    <circle class="progress-ring-circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="12" fill="transparent" r="70" cx="80" cy="80"/>
-                    <circle class="progress-ring-circle" id="daily-progress-circle" stroke="var(--accent-violet)" stroke-width="12" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="439.82" stroke-dashoffset="439.82"/>
-                  </svg>
-                  <div class="ring-text">
-                    <span class="percentage" id="daily-percentage">0%</span>
-                    <span class="label">Completed</span>
-                  </div>
-                </div>
-                <div class="target-details">
-                  <p class="target-text">Focus goal: <strong id="target-hours-display">4 hours</strong></p>
-                  <p class="target-text">Current: <span id="current-hours-display">0 hours</span></p>
-                  <button class="cta-btn violet-btn" id="dashboard-start-focus"><i class="fa-solid fa-play"></i> Start Focusing</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION: FLASHCARDS -->
-        <section id="flashcards" class="content-section">
-          <div class="section-header flex-header">
-            <div>
-              <h1>Smart Flashcards</h1>
-              <p>Reinforce your memory using active recall.</p>
-            </div>
-            <div class="header-controls">
-              <select id="deck-selector" class="custom-select">
-                <!-- Dynamic decks injected here -->
-              </select>
-              <button class="cta-btn cyan-btn" id="new-deck-btn"><i class="fa-solid fa-folder-plus"></i> New Deck</button>
-              <button class="cta-btn violet-btn" id="add-card-btn"><i class="fa-solid fa-plus"></i> Add Card</button>
-            </div>
-          </div>
-
-          <div class="flashcards-layout">
-            <!-- Main Flashcard Workspace -->
-            <div class="card-workspace">
-              <div class="flashcard-container">
-                <div class="flashcard" id="active-flashcard">
-                  <div class="card-face card-front">
-                    <span class="card-category" id="card-display-category">Computer Science</span>
-                    <div class="card-content">
-                      <p id="card-display-question">What is the time complexity of searching in a Balanced Binary Search Tree?</p>
-                    </div>
-                    <span class="card-instruction">Click card to reveal answer</span>
-                  </div>
-                  <div class="card-face card-back">
-                    <span class="card-category">Answer</span>
-                    <div class="card-content">
-                      <p id="card-display-answer">O(log n)</p>
-                    </div>
-                    <span class="card-instruction">Click card to view question</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Study Rating Actions -->
-              <div class="card-controls">
-                <button class="action-rating rating-red" id="rate-hard">
-                  <i class="fa-solid fa-circle-xmark"></i>
-                  <span>Need Review</span>
-                </button>
-                <button class="action-rating rating-green" id="rate-easy">
-                  <i class="fa-solid fa-circle-check"></i>
-                  <span>Mastered</span>
-                </button>
-              </div>
-
-              <!-- Deck Progress Bar -->
-              <div class="deck-progress-wrapper">
-                <div class="progress-labels">
-                  <span id="deck-progress-text">Card 1 of 5</span>
-                  <span id="deck-mastery-ratio">Mastery: 0%</span>
-                </div>
-                <div class="progress-bar-container">
-                  <div class="progress-bar-fill" id="deck-progress-bar" style="width: 20%"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sidebar Decks / Add Card form -->
-            <div class="glass-panel deck-editor-panel">
-              <h3>Create New Card</h3>
-              <form id="new-card-form" class="panel-form">
-                <div class="form-group">
-                  <label for="new-card-deck">Select Deck</label>
-                  <select id="new-card-deck" class="custom-select" required></select>
-                </div>
-                <div class="form-group">
-                  <label for="new-card-q">Question</label>
-                  <textarea id="new-card-q" placeholder="Enter study question..." required rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="new-card-a">Answer</label>
-                  <textarea id="new-card-a" placeholder="Enter target answer..." required rows="3"></textarea>
-                </div>
-                <button type="submit" class="cta-btn submit-btn"><i class="fa-solid fa-plus"></i> Save Card</button>
-              </form>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION: FOCUS TIMER -->
-        <section id="focus" class="content-section">
-          <div class="section-header">
-            <h1>Focus Space</h1>
-            <p>Keep your focus sharp using the Pomodoro technique.</p>
-          </div>
-
-          <div class="focus-layout">
-            <div class="glass-panel timer-panel">
-              <div class="timer-modes">
-                <button class="timer-mode-btn active" data-time="1500" data-mode="pomodoro">Pomodoro (25m)</button>
-                <button class="timer-mode-btn" data-time="300" data-mode="short">Short Break (5m)</button>
-                <button class="timer-mode-btn" data-time="900" data-mode="long">Long Break (15m)</button>
-              </div>
-
-              <div class="large-timer-container">
-                <svg class="timer-svg" width="300" height="300">
-                  <circle class="timer-bg" stroke="rgba(255,255,255,0.03)" stroke-width="8" fill="transparent" r="130" cx="150" cy="150"/>
-                  <circle class="timer-progress" id="timer-progress-circle" stroke="var(--accent-cyan)" stroke-width="8" fill="transparent" r="130" cx="150" cy="150" stroke-linecap="round" stroke-dasharray="816.81" stroke-dashoffset="0"/>
-                </svg>
-                <div class="timer-time" id="timer-clock">25:00</div>
-              </div>
-
-              <div class="timer-controls">
-                <button class="timer-ctrl-btn" id="timer-play-pause" title="Start Timer">
-                  <i class="fa-solid fa-play"></i>
-                </button>
-                <button class="timer-ctrl-btn" id="timer-reset" title="Reset Timer">
-                  <i class="fa-solid fa-rotate-left"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- Focus Stats and Soundboard -->
-            <div class="focus-sidebar-grid">
-              <div class="glass-panel ambient-sounds">
-                <h3>Ambient Soundscape</h3>
-                <p class="subtitle">Block out distractions and dive into deep study.</p>
-                <div class="sounds-list">
-                  <div class="sound-item" data-sound="rain">
-                    <div class="sound-info">
-                      <i class="fa-solid fa-cloud-showers-heavy"></i>
-                      <span>Rainfall</span>
-                    </div>
-                    <button class="sound-play-btn"><i class="fa-solid fa-play"></i></button>
-                    <audio id="audio-rain" loop src="https://assets.mixkit.co/active_storage/sfx/2533/2533-500.wav"></audio>
-                  </div>
-                  <div class="sound-item" data-sound="waves">
-                    <div class="sound-info">
-                      <i class="fa-solid fa-water"></i>
-                      <span>Ocean Waves</span>
-                    </div>
-                    <button class="sound-play-btn"><i class="fa-solid fa-play"></i></button>
-                    <audio id="audio-waves" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio> <!-- Fallback testing audio -->
-                  </div>
-                  <div class="sound-item" data-sound="forest">
-                    <div class="sound-info">
-                      <i class="fa-solid fa-tree"></i>
-                      <span>Forest Birds</span>
-                    </div>
-                    <button class="sound-play-btn"><i class="fa-solid fa-play"></i></button>
-                    <audio id="audio-forest" loop src="https://assets.mixkit.co/active_storage/sfx/2436/2436-500.wav"></audio>
-                  </div>
-                </div>
-              </div>
-
-              <div class="glass-panel session-history">
-                <h3>Daily Focus Stats</h3>
-                <div class="focus-stats-mini">
-                  <div class="mini-stat">
-                    <span class="label">Sessions Completed</span>
-                    <span class="value" id="completed-sessions-count">0</span>
-                  </div>
-                  <div class="mini-stat">
-                    <span class="label">Total Focus Time</span>
-                    <span class="value" id="total-focus-minutes">0m</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION: GPA CALCULATOR -->
-        <section id="gpa" class="content-section">
-          <div class="section-header">
-            <h1>GPA Calculator</h1>
-            <p>Calculate your semester and cumulative GPA easily.</p>
-          </div>
-
-          <div class="gpa-layout">
-            <div class="glass-panel gpa-calc-panel">
-              <h3>Add Course Grade</h3>
-              <form id="gpa-form" class="horizontal-form">
-                <div class="form-group flex-2">
-                  <label for="gpa-course-name">Course Name</label>
-                  <input type="text" id="gpa-course-name" placeholder="e.g., Data Structures" required>
-                </div>
-                <div class="form-group">
-                  <label for="gpa-grade">Grade</label>
-                  <select id="gpa-grade" class="custom-select" required>
-                    <option value="4.0">A+ / A (4.0)</option>
-                    <option value="3.7">A- (3.7)</option>
-                    <option value="3.3">B+ (3.3)</option>
-                    <option value="3.0">B (3.0)</option>
-                    <option value="2.7">B- (2.7)</option>
-                    <option value="2.3">C+ (2.3)</option>
-                    <option value="2.0">C (2.0)</option>
-                    <option value="1.7">C- (1.7)</option>
-                    <option value="1.3">D+ (1.3)</option>
-                    <option value="1.0">D (1.0)</option>
-                    <option value="0.0">F (0.0)</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="gpa-credits">Credits / Weight</label>
-                  <input type="number" id="gpa-credits" min="1" max="10" value="3" required>
-                </div>
-                <button type="submit" class="cta-btn add-gpa-btn"><i class="fa-solid fa-plus"></i> Add</button>
-              </form>
-
-              <div class="gpa-table-wrapper">
-                <table class="gpa-table" id="gpa-table">
-                  <thead>
-                    <tr>
-                      <th>Course</th>
-                      <th>Grade Point</th>
-                      <th>Credits</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody id="gpa-table-body">
-                    <!-- Dynamic entries injected here -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- GPA Result Summary Card -->
-            <div class="glass-panel gpa-summary-panel">
-              <h3>GPA Summary</h3>
-              <div class="gpa-result-display">
-                <div class="gpa-circle-large">
-                  <span class="value" id="computed-gpa-value">0.00</span>
-                  <span class="label">GPA</span>
-                </div>
-              </div>
-              <div class="gpa-stats">
-                <div class="gpa-stat-row">
-                  <span>Total Credits</span>
-                  <strong id="gpa-total-credits">0</strong>
-                </div>
-                <div class="gpa-stat-row">
-                  <span>Honor Class</span>
-                  <strong id="gpa-honors-class">N/A</strong>
-                </div>
-              </div>
-              <button class="cta-btn outline-btn" id="gpa-clear-all"><i class="fa-solid fa-trash-can"></i> Clear All Entries</button>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION: STUDY PLANNER -->
-        <section id="planner" class="content-section">
-          <div class="section-header flex-header">
-            <div>
-              <h1>Study Planner</h1>
-              <p>Keep track of tasks, assignments, and exams.</p>
-            </div>
-            <div class="header-controls">
-              <button class="cta-btn outline-btn" id="clear-completed-btn"><i class="fa-solid fa-broom"></i> Clear Completed</button>
-            </div>
-          </div>
-
-          <div class="planner-layout">
-            <!-- Tasks List glass panel -->
-            <div class="glass-panel planner-tasks-panel">
-              <div class="filters-row">
-                <button class="filter-btn active" data-filter="all">All Tasks</button>
-                <button class="filter-btn" data-filter="assignment">Assignments</button>
-                <button class="filter-btn" data-filter="exam">Exams</button>
-                <button class="filter-btn" data-filter="reading">Readings</button>
-              </div>
-
-              <div class="todo-list-wrapper" id="todo-list">
-                <!-- Dynamic tasks injected here -->
-              </div>
-            </div>
-
-            <!-- Create Task form panel -->
-            <div class="glass-panel planner-form-panel">
-              <h3>Add New Task</h3>
-              <form id="new-task-form" class="panel-form">
-                <div class="form-group">
-                  <label for="task-title">Task Description</label>
-                  <input type="text" id="task-title" placeholder="e.g., Submit Database Assignment 2" required>
-                </div>
-                <div class="form-group">
-                  <label for="task-category">Category</label>
-                  <select id="task-category" class="custom-select" required>
-                    <option value="assignment">Assignment</option>
-                    <option value="exam">Exam</option>
-                    <option value="reading">Reading</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="task-date">Due Date</label>
-                  <input type="date" id="task-date" required>
-                </div>
-                <button type="submit" class="cta-btn submit-btn"><i class="fa-solid fa-calendar-plus"></i> Schedule Task</button>
-              </form>
-            </div>
-          </div>
-        </section>
-
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-header text-center">
+        <span class="section-tag" id="pricing-tagline">cohort selection</span>
+        <h2 id="pricing-headline">Select Your Learning Path</h2>
+        <p id="pricing-subtitle">Choose the cohort built for your current level. Limited seats per cohort to preserve high instructor access.</p>
       </div>
-    </main>
-  </div>
 
-  <!-- Course Modal (Hidden by Default) -->
-  <div class="modal-overlay" id="course-modal">
-    <div class="glass-panel modal-content">
-      <div class="modal-header">
-        <h2>Add New Course</h2>
-        <button class="close-modal-btn" id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="grid-3">
+        <!-- Tier 1: High School Foundations -->
+        <div class="pricing-card" id="tier-1-card">
+          <div>
+            <h3 class="pricing-tier" id="tier-1-name">High School Foundations</h3>
+            <div class="pricing-price" id="tier-1-price">$149<span>/ month</span></div>
+            <p style="margin-bottom: var(--space-md); font-size: 0.9rem;" id="tier-1-desc">
+              Master curriculum basics, learn exam prep strategies, and get introduced to safe, effective AI study tools.
+            </p>
+            <ul class="pricing-features">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Weekly Live Group Classes
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Curriculum Topic Breakdowns
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                AI Study Assistants Setup
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Recorded Video Replays Access
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-outline checkout-trigger" data-tier="high-school" data-price="$149" data-name="High School Foundations" id="tier-1-btn">Secure Seat</button>
+        </div>
+
+        <!-- Tier 2: University Undergrad Elite -->
+        <div class="pricing-card popular" id="tier-2-card">
+          <div class="pricing-badge" id="tier-2-badge">Most Popular</div>
+          <div>
+            <h3 class="pricing-tier" id="tier-2-name">University Undergrad Elite</h3>
+            <div class="pricing-price" id="tier-2-price">$299<span>/ month</span></div>
+            <p style="margin-bottom: var(--space-md); font-size: 0.9rem;" id="tier-2-desc">
+              Accelerate varsity modules, master advanced exam preparation, and construct AI web projects to build your GPA.
+            </p>
+            <ul class="pricing-features">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                All Tier 1 features
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                University Syllabus Modules
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Advanced AI Ideation & Coding
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Direct Priority Email Q&A
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-primary checkout-trigger" data-tier="university" data-price="$299" data-name="University Undergrad Elite" id="tier-2-btn">Secure Seat</button>
+        </div>
+
+        <!-- Tier 3: Career Switcher / Adult -->
+        <div class="pricing-card" id="tier-3-card">
+          <div>
+            <h3 class="pricing-tier" id="tier-3-name">Career Switcher / Adult</h3>
+            <div class="pricing-price" id="tier-3-price">$499<span>/ month</span></div>
+            <p style="margin-bottom: var(--space-md); font-size: 0.9rem;" id="tier-3-desc">
+              Construct a practical digital portfolio. Transition your career using AI interfaces, landing pages, and Webflow templates.
+            </p>
+            <ul class="pricing-features">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                All Tier 2 features
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Career & Resume Consulting
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Custom Portfolio Site Launch
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                1-on-1 Monthly Mentorship
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-outline checkout-trigger" data-tier="career" data-price="$499" data-name="Career Switcher / Adult" id="tier-3-btn">Secure Seat</button>
+        </div>
       </div>
-      <form id="new-course-form" class="panel-form">
-        <div class="form-group">
-          <label for="course-name-input">Course Name</label>
-          <input type="text" id="course-name-input" placeholder="e.g., Object Oriented Programming" required>
+    </div>
+  </section>
+
+  <!-- Checkout Modal (Simulated E-Commerce Checkout Trigger) -->
+  <div class="modal-overlay" id="checkout-modal-overlay">
+    <div class="checkout-modal" id="checkout-modal">
+      <div class="checkout-header">
+        <h3 id="modal-heading">Secure Your Cohort Seat</h3>
+        <button class="close-btn" id="close-checkout-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="checkout-body">
+        <!-- Input State -->
+        <div id="checkout-form-container">
+          <div class="checkout-summary-card">
+            <span id="selected-tier-name" class="checkout-summary-tier">Cohort Tier</span>
+            <span id="selected-tier-price" class="checkout-summary-price">$000</span>
+          </div>
+          <form id="checkout-form">
+            <div class="form-group">
+              <label for="checkout-email">Email Address</label>
+              <input type="email" id="checkout-email" class="form-input" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="checkout-card">Card Number</label>
+              <input type="text" id="checkout-card" class="form-input" placeholder="4242 4242 4242 4242" value="4242 4242 4242 4242" readonly>
+            </div>
+            <div class="grid-2" style="gap: var(--space-sm); margin-bottom: var(--space-md);">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="checkout-exp">Expiration</label>
+                <input type="text" id="checkout-exp" class="form-input" placeholder="MM/YY" value="12/28" readonly>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="checkout-cvc">CVC</label>
+                <input type="text" id="checkout-cvc" class="form-input" placeholder="123" value="123" readonly>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: var(--border-radius-sm);" id="pay-button">Pay & Initialize Onboarding</button>
+          </form>
+          <div class="checkout-secure-notice">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>Simulated checkout. No actual charges will occur.</span>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="course-code-input">Course Code</label>
-          <input type="text" id="course-code-input" placeholder="e.g., CS201" required>
+
+        <!-- Loading State -->
+        <div id="checkout-loading-state" class="checkout-loading-container">
+          <div class="spinner"></div>
+          <h4 id="loading-heading">Processing Payment...</h4>
+          <p id="loading-subheading" style="font-size: 0.9rem; margin-top: 4px;">Connecting to secure gateway</p>
+          <div class="progress-track">
+            <div class="progress-bar" id="checkout-progress-bar"></div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="course-progress-input">Starting Progress (%)</label>
-          <input type="number" id="course-progress-input" min="0" max="100" value="0" required>
-        </div>
-        <div class="form-group">
-          <label for="course-color-input">Accent Color</label>
-          <select id="course-color-input" class="custom-select" required>
-            <option value="var(--accent-violet)">Violet</option>
-            <option value="var(--accent-cyan)">Cyan</option>
-            <option value="var(--accent-emerald)">Emerald</option>
-            <option value="var(--accent-amber)">Amber</option>
-          </select>
-        </div>
-        <button type="submit" class="cta-btn submit-btn">Create Course</button>
-      </form>
+      </div>
     </div>
   </div>
 
-  <!-- Script entry -->
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 id="footer-logo">Thobeka Zwane</h4>
+          <p id="footer-brand-desc">Master the syllabus. Accelerate your career. Harness AI for design and learning.</p>
+        </div>
+        <div class="footer-links-col">
+          <h5>Storefront</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="#pricing">Cohorts Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="onboarding.html">Student Portal</a></li>
+            <li><a href="onboarding.html#faq">FAQs</a></li>
+            <li><a href="mailto:hello@thobekazwane.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p id="copyright">&copy; 2026 Thobeka Zwane. All rights reserved.</p>
+        <p id="footer-terms">Minimalist Design by Antigravity</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="app.js"></script>
 </body>
 </html>

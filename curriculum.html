@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cohort Curriculum & AI Toolbox — Thobeka Zwane</title>
+  <meta name="description" content="Discover our week-by-week curriculum module breakdown and the modern AI design toolbox utilized in our learning cohorts.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" id="brand-logo">Thobeka Zwane</a>
+      <button class="burger-menu" id="burger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" id="nav-link-home">Home</a></li>
+        <li><a href="curriculum.html" class="active" id="nav-link-curriculum">Curriculum</a></li>
+        <li><a href="onboarding.html" id="nav-link-onboarding">Student Portal</a></li>
+        <li><a href="index.html#pricing" class="btn btn-outline" id="nav-link-cta" style="padding: 0.5rem 1.25rem;">Enroll</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="curriculum-hero" id="curriculum-hero">
+    <div class="container" style="max-width: 800px;">
+      <span class="hero-tag" id="curriculum-tag">syllabus outline</span>
+      <h1 class="hero-title" id="curriculum-headline">Learn Academic Foundations <br><span class="serif-italic text-accent">Power-Charged with AI</span></h1>
+      <p class="hero-description" id="curriculum-copy" style="margin-top: var(--space-sm);">
+        Don't spend weeks studying textbook definitions in a vacuum. We pair standard curriculum topics with immediate practical application using professional AI design environments.
+      </p>
+    </div>
+  </header>
+
+  <!-- Timeline / Modules Overview -->
+  <section class="curriculum-timeline" id="timeline-section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-xl);">
+        <span class="section-tag">week-by-week roadmap</span>
+        <h2>Inside the Cohort Curriculum</h2>
+        <p>A structured, high-intensity pathway to mastering coding fundamentals and design concepts.</p>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- Module 1 -->
+        <div class="timeline-item" id="module-1">
+          <div class="timeline-dot"></div>
+          <span class="timeline-week">Weeks 1 - 2</span>
+          <h3 class="timeline-title">Core Web Mechanics & Prompting Paradigms</h3>
+          <p>
+            Understand standard DOM structure, document layout rules (Flexbox, Grid), and CSS custom properties. Learn how to draft precise markdown specifications to prompt initial interfaces using Large Language Models.
+          </p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="timeline-item" id="module-2">
+          <div class="timeline-dot"></div>
+          <span class="timeline-week">Weeks 3 - 4</span>
+          <h3 class="timeline-title">UI Generative Engineering (v0 & Midjourney)</h3>
+          <p>
+            Dive into modern component rendering. Use v0 to prototype responsive widgets, navigation, and page layouts. Learn the syntax of generating high-end color themes, gradients, and custom brand assets with text-to-image AI tools.
+          </p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="timeline-item" id="module-3">
+          <div class="timeline-dot"></div>
+          <span class="timeline-week">Weeks 5 - 6</span>
+          <h3 class="timeline-title">AI-Assisted Code Assembly (Cursor IDE)</h3>
+          <p>
+            Configure a modern development setup using Cursor. Understand codebase context mapping, codebase-wide search, inline edits, and semantic terminal command suggestions to debug applications in real-time.
+          </p>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="timeline-item" id="module-4">
+          <div class="timeline-dot"></div>
+          <span class="timeline-week">Weeks 7 - 8</span>
+          <h3 class="timeline-title">Dynamic Logic, Databases & Git Pipelines</h3>
+          <p>
+            Add interactive logic, local storage, API integrations, and checkout simulators using JavaScript. Learn how to version control your assets with Git, push to GitHub, and deploy instantly to host solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive AI Toolbox Section -->
+  <section class="curriculum-toolbox" id="toolbox-section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-lg);">
+        <span class="section-tag">workspace instruments</span>
+        <h2>Your AI Web Design Toolbox</h2>
+        <p>The cutting-edge stack you will master throughout the weekly training sessions.</p>
+      </div>
+
+      <div class="toolbox-grid" id="toolbox-grid">
+        <!-- Cursor Card -->
+        <div class="tool-card" id="tool-cursor">
+          <div class="tool-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <h4 class="tool-name">Cursor IDE</h4>
+          <p style="font-size: 0.9rem;">Next-generation code editor with native LLM autocomplete, multi-file edits, and chat.</p>
+        </div>
+
+        <!-- v0 Card -->
+        <div class="tool-card" id="tool-v0">
+          <div class="tool-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          </div>
+          <h4 class="tool-name">v0 by Vercel</h4>
+          <p style="font-size: 0.9rem;">Generative UI system that builds clean React, Tailwind, and HTML blocks from text inputs.</p>
+        </div>
+
+        <!-- Claude Card -->
+        <div class="tool-card" id="tool-claude">
+          <div class="tool-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h4 class="tool-name">Claude 3.5 Sonnet</h4>
+          <p style="font-size: 0.9rem;">Our core LLM logic engine for complex code structuring, debugging, and academic explanations.</p>
+        </div>
+
+        <!-- GitHub Card -->
+        <div class="tool-card" id="tool-github">
+          <div class="tool-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </div>
+          <h4 class="tool-name">GitHub</h4>
+          <p style="font-size: 0.9rem;">The standard professional portal for publishing portfolio files, version histories, and code pages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="curriculum-cta" id="cta-banner" style="background-color: var(--bg-primary); padding: var(--space-xxl) 0;">
+    <div class="container text-center" style="max-width: 600px;">
+      <h2 style="margin-bottom: var(--space-sm);">Ready to Transform Your Workflow?</h2>
+      <p style="margin-bottom: var(--space-lg);">Seats are limited to 15 students per cohort to ensure deep mentoring. Secure your registration today.</p>
+      <a href="index.html#pricing" class="btn btn-primary" id="curriculum-cta-btn">Secure Your Cohort Seat</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 id="footer-logo">Thobeka Zwane</h4>
+          <p id="footer-brand-desc">Master the syllabus. Accelerate your career. Harness AI for design and learning.</p>
+        </div>
+        <div class="footer-links-col">
+          <h5>Storefront</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="index.html#pricing">Cohorts Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="onboarding.html">Student Portal</a></li>
+            <li><a href="onboarding.html#faq">FAQs</a></li>
+            <li><a href="mailto:hello@thobekazwane.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p id="copyright">&copy; 2026 Thobeka Zwane. All rights reserved.</p>
+        <p id="footer-terms">Minimalist Design by Antigravity</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
